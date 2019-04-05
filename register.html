@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" lang="en" >
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Web Application Development :: Assignment 1" />
+	<meta name="viewport" content="width-device-width, inital-scale=1" />
+	<title>Register</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body><?php	
+
+	if(isset())
+	session_start(); 
+				 if (!isset ($_SESSION["friend_email"])) { 
+					$_SESSION["friend_email"] = $email;  
+				 }
+				 $sessionEmail = $_SESSION["friend_email"]; 
+				 
+	?>
+				 
+	<div class="container"> 
+		<div class="row form-bg form-bg-post">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<center><h2>Create Your Profile</h2></center>
+				<form action="#" method="post">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<label for="fullname" class="thick">Name* <br/>
+							
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<input  type="text" id="fullname" class="form-control" placeholder="E.g. Cindy Bacon"  pattern="[A-Za-z]{3,40}" required name="fullname"
+							title="Name should only consist of capital and/or small letters, no numbers, or symbols, minimum 3 characters"
+							/> </label><br/>
+							
+						</div>
+					</div> 
+					
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<label for="emailaddress" class="thick">Email Address* <br/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							 <input  type="email" id="emailaddress" required class="form-control" placeholder="E.g. cbacon@xyz.com" name="emailaddress" title="Email address should follow the email format"/></label><br/>
+						</div>
+					</div> 
+					
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<label for="dob" class="thick">Date of Birth* <br/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							
+								<input type="date" value="2019-04-05"
+								min="1940-01-01" max="2018-12-31" id="dob" required class="form-control" name="dob" /></label><br/>
+						</div>
+					</div> 
+					
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<label for="location" class="thick">Location* <br/>
+							<small id="locationHelp" class="form-text text-primary">Click the map to choose location</small>
+							
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<input type="text" id="location" required="required" readonly class="form-control" aria-describedby="locationHelp"  title="Choose the location by clicking the map"/>
+							<div id="map" style="width:100%;height:400px;"></div>
+							<input type="text" id="lat" hidden>
+							<input type="text" id="lng" hidden>
+							
+							 <br/>
+						</div>
+					</div> 
+					
+					<div class="row">
+					<div class="col-xs-8 col-sm-8 col-md-8 col-lg-7">
+						
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-5">
+					 <button type="reset"  class="btn btn-primary">
+						Reset</button>
+						 <button type="submit"  class="btn btn-primary">
+						Register</button>
+					</div>
+					</div>
+				</form> 
+			</div> 
+		</div>
+	</div>
+	
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAv3ym4ncxPFVSdBk4yIGTj5_0A9KLxEw&callback=myMap"></script>
+		<script type="text/javascript" src="js/map.js"></script>
+		<script src="boostrap/js/jquery-1.12.4.min.js"></script>
+		<script src="boostrap/js/bootstrap.min.js"></script>
+</body>
+</html>

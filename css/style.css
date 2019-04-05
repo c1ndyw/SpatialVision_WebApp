@@ -1,0 +1,141 @@
+.thread-img{
+	width:100%;
+	height:100%;
+	padding-top:1px;
+	
+}
+.thread-img:hover{
+	-ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+	
+}
+
+
+body {
+	background-image:url('style/bg-img.jpg');
+	background-repeat:no-repeat;
+	
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a{
+	text-decoration: none;
+}
+h2{
+	padding-bottom :40px;
+}
+input[type=text],[type=reset], select, textarea {
+    width: 100%;
+    padding: 5px 10px;
+    margin-top: 4px ;
+	margin-bottom:4px ;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+div.seperator3{
+	width: 100px;
+	float:left;
+}
+input[type=submit], [type=reset] {
+    width: 30%;
+    background-color: teal;
+	opacity: 1;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	
+}
+
+div.form-bg {
+	background-color:rosybrown;
+	border-style:solid;
+	padding:35px;
+	opacity:0.9;
+	border-radius:40px;
+	border-color:goldenrod;
+	margin: auto;
+    margin-top : 50px;
+}
+
+div.form-bg-post2
+{	
+	height:500px;
+	width:25%;
+}
+div.form-bg-index {
+	height:320px;
+	width: 60%;
+}
+div.form-bg-post
+{	padding-top:40px;
+	height:1000px;
+	width:60%;
+}
+div.form-bg-post3
+{	padding-top:0px;
+	height:750px;
+	width:25%;
+}
+
+
+div.seperator{
+	margin:120px;
+}
+
+div.seperator1{
+	margin: 60px;
+	
+}
+.thick{
+	font-weight: bold;
+	
+}
+.italic{
+	font-style:italic;
+	color:maroon;
+}
+.form-input-margin{
+	margin-top:8px;
+	margin-bottom:8px;
+}
+div.menu{
+	
+	display:inline-block;
+    padding: 6px 12px;
+	padding-bottom:15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    background-color: teal;
+	width:130px;
+	height:10px;
+	opacity:1;
+	
+}
+
