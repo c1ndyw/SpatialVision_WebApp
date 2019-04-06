@@ -78,7 +78,7 @@ div.form-bg-index {
 }
 div.form-bg-post
 {	padding-top:40px;
-	height:1000px;
+	height:80%;
 	width:60%;
 }
 div.form-bg-post3
@@ -138,4 +138,12 @@ div.menu{
 	opacity:1;
 	
 }
+
+@media screen and (max-width: 1000px) {
+	div.form-bg-post{
+		height:100%;
+		width:100%;
+	}
+}
+
 
