@@ -26,7 +26,7 @@ a{
 	text-decoration: none;
 }
 h2{
-	padding-bottom :40px;
+	padding-bottom :20px;
 }
 input[type=text],[type=reset], select, textarea {
     width: 100%;
@@ -78,8 +78,8 @@ div.form-bg-index {
 }
 div.form-bg-post
 {	padding-top:40px;
-	height:80%;
-	width:60%;
+	height:60%;
+	width:40%;
 }
 div.form-bg-post3
 {	padding-top:0px;

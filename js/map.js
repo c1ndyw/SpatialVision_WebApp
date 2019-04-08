@@ -1,5 +1,4 @@
 //map.js
- 
 //Set up some of our variables.
 var map; //Will contain map object.
 var marker = false; ////Has the user plotted their location marker? 
@@ -7,25 +6,29 @@ var marker = false; ////Has the user plotted their location marker?
 //Function called to initialize / create the map.
 //This is called when the page has loaded.
 function initMap() {
- 
-    //The center location of our map.
-    var centerOfMap = new google.maps.LatLng(-37.766,145.352);
-	
+	var centerOfMap ;
+	if (localStorage.getItem('lat') !== null && localStorage.getItem('lng') !== null){
+		centerOfMap=new google.maps.LatLng(localStorage.getItem('lat'),localStorage.getItem('lng'));
+	}else{
+		//The center location of map by default.
+		centerOfMap = new google.maps.LatLng(-37.766,145.352);
+	}
     //Map options.
     var options = {
       center: centerOfMap, //Set center.
       zoom: 4 //The zoom value.
+	
     };
 	
-
     //Create the map object.
-			map = new google.maps.Map(document.getElementById('map'), options);
-			marker = new google.maps.Marker({
-						position: centerOfMap,
-						map: map,
-						draggable: true //make it draggable
-						});
-			markerLocation() ;
+	map = new google.maps.Map(document.getElementById('map'), options);
+	marker = new google.maps.Marker({
+				position: centerOfMap,
+				map: map,
+				draggable: true //make it draggable
+				});
+	markerLocation() ;
+	
     //Listen for any clicks on the map.
     google.maps.event.addListener(map, 'click', function(event) {                
         //Get the location that the user clicked.
@@ -57,12 +60,16 @@ function initMap() {
 function markerLocation(){
     //Get location.
     var currentLocation = marker.getPosition();
+	if (localStorage.getItem('lat') !== null && localStorage.getItem('lng') !== null){
+		localStorage.setItem('lat', currentLocation.lat());
+		localStorage.setItem('lng', currentLocation.lng());
+		
+	}
     //Add lat and lng values to a field that we can save.
     document.getElementById('lat').value = currentLocation.lat(); //latitude
     document.getElementById('lng').value = currentLocation.lng(); //longitude
 	displayLocation(currentLocation.lat(),currentLocation.lng()) ;
 }
-
 
 function displayLocation(latitude,longitude){
 	var geocoder;
@@ -81,7 +88,7 @@ function displayLocation(latitude,longitude){
                     country=value[count-1];
                     state=value[count-2];
                     city=value[count-3];
-                   document.getElementById('location').value =  state + ","+ country ;
+                   document.getElementById('location').value = state + ","+ country ;
                 }
                 else  {
                    // x.innerHTML = "address not found";
@@ -92,8 +99,6 @@ function displayLocation(latitude,longitude){
             }
         }
     );
-   
-}    
-
+}   
 //Load the map when the page has finished loading.
 google.maps.event.addDomListener(window, 'load', initMap);
